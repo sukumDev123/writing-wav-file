@@ -4,7 +4,6 @@
 
 ```
     POST /wave/write_file
-
 ```
 
 for handle write file and save name file for show on client.
