@@ -15,6 +15,7 @@ export interface FileDetail {
     type: string
     size: number
     public: boolean
+    date: number
 }
 
 export class RealTimeDataBase {

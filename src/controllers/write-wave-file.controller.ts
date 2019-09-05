@@ -3,13 +3,13 @@ import { RealTimeDataBase, FileDetail } from '../lib/realtimedb'
 export const writeWaveFile = (req, res, next) => {
     const files = req.files[0]
     const { name_user } = req.body
-    const file_ = process.env.SAVE_FILE_TO_FOLDER
     const fileDetail: FileDetail = {
         filename: files.filename,
         size: files.size,
-        path: `/${file_}/sound/${files.filename}`,
+        path: `sound/${files.filename}`,
         type: files.mimetype.split('/')[1],
         public: false,
+        date: +new Date(),
     }
     const realTimedb: RealTimeDataBase = req.db
     realTimedb
